@@ -1,0 +1,7 @@
+- Database and service responsibilities are mixed in several enrollment methods.
+- Some functions both query/update the database and make business decisions, which increases coupling.
+- Global state/config values are shared across multiple layers, making debugging harder.
+- The main runner controls too many responsibilities and should eventually be separated into smaller orchestration layers.
+- Enrollment and unenrollment workflows likely need splitting into dedicated service and database responsibilities.
+- Database helper methods are mostly single-purpose and fit well into a future Database class.
+- Several methods depend heavily on passed/shared state, which could reduce maintainability as the project grows.
